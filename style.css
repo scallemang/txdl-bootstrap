@@ -1,0 +1,21 @@
+/*
+Theme Name: TXDL v. Bootstrap
+Theme URI: https://github.com/scallemang/txdl-bootstrap
+Author: SC Allemang for Techsdale
+Author URI: https://scallemang.ca/
+Description: Twitter Bootstrap for Techsdale; designed for networking.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: good
+Text Domain: txdl-bootstrap
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
