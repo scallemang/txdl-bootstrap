@@ -57,7 +57,7 @@ body {
 	color: #fff;	
 }	
 
-.current-menu-item > a, .current-menu-parent > a, .navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
+.current-menu-item > a, .current-menu-parent > a {
 	background: #000;	
 }
 .current-menu-parent li a {
