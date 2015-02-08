@@ -23,3 +23,8 @@ body {
 .admin-bar .navbar-fixed-top {
 	margin-top: 32px;
 }
+
+.current-menu-item > a,
+.menu-item:hover > a {
+	background: #000;
+}
