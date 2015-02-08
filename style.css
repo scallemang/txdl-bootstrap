@@ -25,6 +25,7 @@ body {
 }
 
 .current-menu-item > a,
-.menu-item:hover > a {
+.navbar-inverse .navbar-nav>li>a:focus, 
+.navbar-inverse .navbar-nav>li>a:hover {
 	background: #000;
 }
