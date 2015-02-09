@@ -2,6 +2,7 @@
 /*
 Template Name: Full Width
 */
+?>
 <?php get_header(); ?>
 
   <div class="container">
