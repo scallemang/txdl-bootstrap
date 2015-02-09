@@ -12,8 +12,9 @@
           <article>
             <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
             <p>By <?php the_author(); ?> on <?php echo the_time('l, F jS, Y'); ?> in <?php the_category(', '); ?>. <a href="<?php comments_link(); ?>"><?php comments_number(); ?></a></p>
+            <?php the_excerpt(); ?>
           </article>
-          <?php the_content(); ?>
+          <hr>
         <?php endwhile; else: ?>
           <div class="page-header">
             <h1>There isn&rsquo;t any content here!</h1>
