@@ -1,5 +1,6 @@
-<div class="col-md-3">
-	<h2>Sidebar</h2>
-	<p>Donec id elit non mi porta gravida et eget metus.</p>
-	<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+<div class="col-md-3 sidebar">
+	<?php if ( ! dynamic_sidebar( 'page' ) ): ?>
+		<h2>Sidebar Setup</h2>
+		<p>Please add widgets to the page sidebar to have them display here.</p>
+	<?php endif; ?>
 </div>
