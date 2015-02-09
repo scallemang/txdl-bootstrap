@@ -68,3 +68,6 @@ body {
 	font-weight: bold;
 }
 
+.sidebar .widget:first-of-type {
+	margin-top: 40px;
+}
