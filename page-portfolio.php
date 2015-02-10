@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Portfolio Grid
+Template Name: Portfolio Grid Template
 */
 ?>
 <?php get_header(); ?>
