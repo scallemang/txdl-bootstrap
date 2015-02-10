@@ -34,6 +34,11 @@ Template Name: Portfolio Grid Template
 
       <?php if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
         <div class="col-sm-3 portfolio-piece">
+          <?php
+            $thumbnail_id = get_post_thumbnail_id();
+            $thumbnail_url = wp_get_attachment_image_src( $thumbnail_id, 'thumbnail-size', true );
+           ?>
+          <p><img src="<?php echo $thumbnail_url[0]; ?>" alt="<?php the_title(); ?>" class="img-responsive"></p>
           <h3><?php the_title(); ?>
         </div>
       <?php endwhile; endif; ?>
