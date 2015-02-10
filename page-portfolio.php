@@ -38,8 +38,8 @@ Template Name: Portfolio Grid Template
           $thumbnail_id = get_post_thumbnail_id();
           $thumbnail_url = wp_get_attachment_image_src( $thumbnail_id, 'thumbnail-size', true );
          ?>
-        <p><img src="<?php echo $thumbnail_url[0]; ?>" alt="<?php the_title(); ?>" class="img-responsive"></p>
-        <h3><?php the_title(); ?>
+        <p><a href="<?php the_permalink(); ?>"><img src="<?php echo $thumbnail_url[0]; ?>" alt="<?php the_title(); ?>" class="img-responsive"></a></p>
+        <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></h3>
       </div>
 
     <?php $portfolio_count = $the_query->current_post + 1; ?>
