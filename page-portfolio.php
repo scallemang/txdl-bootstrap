@@ -22,4 +22,20 @@ Template Name: Portfolio Grid Template
         <?php endif; ?>
      </div>
     </div>
+
+    <div class="row">
+      <?php
+        $args = array( 
+          'post_type' => 'portfolio'
+        );
+        $the_query = new WP_Query( $args );
+
+      ?>
+
+      <?php if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+        <div class="col-sm-3 portfolio-piece">
+          <h3><?php the_title(); ?>
+        </div>
+      <?php endwhile; endif; ?>
+    </div>
 <?php get_footer(); ?>
