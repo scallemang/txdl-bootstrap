@@ -19,7 +19,7 @@
             $thumbnail_id = get_post_thumbnail_id(); 
             $thumbnail_url = wp_get_attachment_image_src( $thumbnail_id, 'thumbnail-size', true );
           ?>
-          <p><a href="<?php the_permalink(); ?>"><img src="<?php echo $thumbnail_url[0]; ?>" alt="<?php the_title();?> graphic"></a></p>
+          <p><a href="<?php the_permalink(); ?>"><img src="<?php echo $thumbnail_url[0]; ?>" alt="<?php the_title();?> graphic" class="img-responsive"></a></p>
         </div>
         <div class="col-sm-4">
           <h1><?php the_title(); ?></h1>
