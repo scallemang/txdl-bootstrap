@@ -25,6 +25,7 @@
       <div class="col-sm-4">
         <h1><?php the_title(); ?></h1>
         <?php the_content(); ?>
+        <p><a href="<?php the_field('link'); ?>" class="btn btn-large btn-primary">View Final Piece <span class="glyphicon glyphicon-arrow-right"></span></a></p>
       </div>
     </div>
 <?php get_footer(); ?>
