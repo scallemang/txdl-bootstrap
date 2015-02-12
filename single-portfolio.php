@@ -1,6 +1,17 @@
 <?php get_header(); ?>
 
   <div class="container">
+    <div class="page-header">
+      <div class="row">
+        <div class="col-xs-9">
+          <h1>Portfolio</h1>
+        </div>
+        <div class="col-xs-9 prev-next">
+          <?php next_post_link( '%link', 'Left' ); ?>
+          <?php prev_post_link( '%link', 'Right' ); ?>
+        </div>
+      </div>
+    </div>
     <div class="row">
       <div class="col-sm-8 img-portfolio">
         <?php
