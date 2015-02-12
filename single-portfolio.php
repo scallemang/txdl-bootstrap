@@ -6,9 +6,10 @@
         <div class="col-xs-9">
           <h1>Portfolio</h1>
         </div>
-        <div class="col-xs-9 prev-next">
-          <?php next_post_link( '%link', 'Left' ); ?>
-          <?php prev_post_link( '%link', 'Right' ); ?>
+        <div class="col-xs-3 prev-next">
+          <?php next_post_link( '%link', '<span class="glyphicon glyphicon-circle-arrow-left"></span>' ); ?>
+          <a href="<?php bloginfo('url'); ?>/?p=46"><span class="glyphicon glyphicon-th"></span></a>
+          <?php prev_post_link( '%link', '<span class="glyphicon glyphicon-circle-arrow-right"></span>' ); ?>
         </div>
       </div>
     </div>
