@@ -33,8 +33,13 @@
           <!-- Wrapper for slides -->
           <div class="carousel-inner" role="listbox">
             <?php if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-              <div class="item active">
-                <img src="..." alt="...">
+              <div class="item <?php echo $the_query->current_post ?>" class="<?php if ( $the_query->current_post == 0 ): ?>active<?php endif; ?>">
+                <?php
+                  $thumbnail_id = get_post_thumbnail_id();
+                  $thumbnail_url = wp_get_attachment_image_src( $thumbnail_id, 'thumbnail-size', true );
+                  $thumbnail_meta = get_post_meta( $thumbnail_id, '_wp_attachment_image_alt', true );
+                 ?>
+                 <a href="<?php the_permalink(); ?>"><img src="<?php echo $thumbnail_url[0]; ?>" alt="<?php echo $thumbnail_meta; ?>" class="img-responsive img-featured"></a>
                 <div class="carousel-caption">
                   ...
                 </div>
