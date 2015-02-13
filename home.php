@@ -19,32 +19,33 @@
 
         ?>
 
-        <?php if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-          <?php the_title(); ?></p>
-        <?php endwhile; endif; ?>
-
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
           <!-- Indicators -->
           <ol class="carousel-indicators">
-            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <?php if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+              <li data-target="#carousel-example-generic" data-slide-to="<?php echo $the_query->current_post ?>" class="<?php if ( $the_query->current_post == 0 ): ?>active<?php endif; ?>"></li>
+            <?php endwhile; endif; ?>
             
           </ol>
 
+          <?php rewind_posts(); ?>
+
           <!-- Wrapper for slides -->
           <div class="carousel-inner" role="listbox">
-            <div class="item active">
-              <img src="..." alt="...">
-              <div class="carousel-caption">
-                ...
+            <?php if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+              <div class="item active">
+                <img src="..." alt="...">
+                <div class="carousel-caption">
+                  ...
+                </div>
               </div>
-            </div>
-            <div class="item">
-              <img src="..." alt="...">
-              <div class="carousel-caption">
-                ...
+              <div class="item">
+                <img src="..." alt="...">
+                <div class="carousel-caption">
+                  <?php the_title(); ?>
+                </div>
               </div>
-            </div>
-            ...
+            <?php endwhile; endif; ?>
           </div>
 
           <!-- Controls -->
