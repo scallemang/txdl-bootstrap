@@ -5,7 +5,7 @@
       </footer>
     </div> <!-- /container -->
 
-    <div class="modal fade">
+    <div id="contact-form" class="modal fade">
 	  <div class="modal-dialog">
 	    <div class="modal-content">
 	      <div class="modal-header">
