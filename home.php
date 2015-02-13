@@ -44,12 +44,6 @@
                   ...
                 </div>
               </div>
-              <div class="item">
-                <img src="..." alt="...">
-                <div class="carousel-caption">
-                  <?php the_title(); ?>
-                </div>
-              </div>
             <?php endwhile; endif; ?>
           </div>
 
